@@ -1,0 +1,77 @@
+Cenários de teste:
+Caminho feliz 
+
+alternativos
+
+no minimo 4
+
+
+Cenário 1:
+ Tudo perfeito
+ idade= 20,score = 800
+ Espero aprovado
+
+
+ Cenário 2: 
+ Quase lá
+ idade = 19, Score= 499
+
+ Espero=recusado
+
+ Cenário 3:
+ Nem fudendo
+ Idade = 17,score= 150
+ Espero= Nem fudendo
+
+
+ Cenário 4: Fudido
+idade = 35, score= 50
+Espero: Sai daqui cachorrro
+
+
+Cenário 5 : Vorcaro
+Idade 42, Score = 1000
+
+Espero: Daniel Vorcaro é você ?
+
+
+Cenário 6: No limite da aprovação
+idade = 18, score = 500
+Espero: Aprovado
+
+Cenário 7: No limite da idade
+idade = 18, score = 499
+Espero: Recusado
+
+Cenário 8: Score mínimo para aprovação
+idade = 25, score = 500
+Espero: Aprovado
+
+Cenário 9: Um ponto abaixo
+idade = 25, score = 499
+Espero: Recusado
+
+Cenário 10: Criança com score absurdo
+idade = 17, score = 1000
+Espero: Nem fudendo
+
+Cenário 11: Idade mínima com score máximo
+idade = 18, score = 1000
+Espero: Aprovado
+
+Cenário 12: Idade alta, score baixo
+idade = 60, score = 100
+Espero: Sai daqui cachorro
+
+Cenário 13: Idade e score zerados
+idade = 0, score = 0
+Espero: Nem fudendo
+
+Cenário 14: Score negativo
+idade = 30, score = -100
+Espero: Sai daqui cachorro
+
+Cenário 15: Score extremamente alto
+idade = 30, score = 9999
+Espero: Aprovado
+

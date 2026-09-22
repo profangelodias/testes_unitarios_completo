@@ -24,3 +24,74 @@
 # Dívida mensal acima de 40% da renda → "Recusado"
 # Dados inválidos ou ausentes → erro de validação
 # Tudo válido → "Aprovado"
+
+
+def validar_solicitacao_emprestimo(
+    idade,
+    score_credito,
+    salario_mensal,
+    valor_solicitado,
+    divida_mensal
+):
+    """
+    Valida se uma solicitação de empréstimo pode ser aprovada no QaBank.
+
+    Regras de negócio:
+    - Cliente deve ter pelo menos 18 anos.
+    - Score deve ser maior ou igual a 650.
+    - Salário mensal deve ser maior que zero.
+    - Valor solicitado deve ser maior que zero.
+    - Valor solicitado não pode ultrapassar 10x o salário.
+    - Dívida mensal não pode ultrapassar 40% da renda.
+    - Menor de idade gera exceção.
+    - Dados inválidos geram erro de validação.
+    """
+
+    # Validação dos dados de entrada
+    if (
+        idade is None
+        or score_credito is None
+        or salario_mensal is None
+        or valor_solicitado is None
+        or divida_mensal is None
+    ):
+        raise ValueError("Dados obrigatórios ausentes")
+
+    # Validação do tipo dos dados
+    if not all(
+        isinstance(valor, (int, float))
+        for valor in [
+            idade,
+            score_credito,
+            salario_mensal,
+            valor_solicitado,
+            divida_mensal
+        ]
+    ):
+        raise ValueError("Dados inválidos")
+
+    # Menor de idade
+    if idade < 18:
+        raise ValueError("Menor de idade não permitido")
+
+    # Score insuficiente
+    if score_credito < 650:
+        return "Recusado"
+
+    # Salário inválido
+    if salario_mensal <= 0:
+        return "Recusado"
+
+    # Valor do empréstimo inválido
+    if valor_solicitado <= 0:
+        return "Recusado"
+
+    # Empréstimo acima de 10x o salário
+    if valor_solicitado > salario_mensal * 10:
+        return "Recusado"
+
+    # Dívida acima de 40% da renda
+    if divida_mensal > salario_mensal * 0.40:
+        return "Recusado"
+
+    return "Aprovado"
