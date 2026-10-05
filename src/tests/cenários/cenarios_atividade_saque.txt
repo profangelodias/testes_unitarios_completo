@@ -1,0 +1,35 @@
+ANÁLISE DE CENÁRIOS - VALIDAÇÃO DE SAQUE
+
+Preencha este documento antes de completar os testes automatizados.
+ Derive os cenários dos critérios de aceite em
+ src/tech/angelofdiasg/qabank/operacoes/requisito_atividade_saque.txt.
+
+Caminho feliz
+-------------
+Cenário:
+Entrada:
+Resultado esperado:
+
+Limites e partições válidas
+---------------------------
+Cenário:
+Entrada:
+Resultado esperado:
+
+Partições inválidas e exceções
+------------------------------
+Cenário:
+Entrada:
+Resultado esperado:
+
+Prioridade entre regras
+-----------------------
+Cenário:
+Entrada:
+Resultado esperado:
+
+Integridade dos dados de entrada
+--------------------------------
+Cenário:
+Entrada:
+Resultado esperado:
